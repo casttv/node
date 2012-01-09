@@ -149,6 +149,10 @@ You can test this server by connecting to it with `openssl s_client`:
 Creates a new client connection to the given `port` and `host`. (If `host`
 defaults to `localhost`.) `options` should be an object which specifies
 
+  - `socket`: Establish secure connection on a given socket rather than
+    creating a new socket. If this option is specified, `host` and `port`
+    are ignored.
+
   - `key`: A string or `Buffer` containing the private key of the client in
     PEM format.
 

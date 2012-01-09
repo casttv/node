@@ -39,7 +39,11 @@ var server = tls.createServer(options, function(socket) {
   socket.end('Hello');
 }).listen(common.PORT, function() {
   var socket = net.connect(common.PORT, function() {
+<<<<<<< HEAD
     var client = tls.connect(0, {socket: socket}, function() {
+=======
+    var client = tls.connect({socket: socket}, function() {
+>>>>>>> c1a63a9... tls: Allow establishing secure connection on the existing socket
       clientConnected = true;
       var data = '';
       client.on('data', function(chunk) {
